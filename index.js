@@ -55,6 +55,6 @@ app.use("/users", require("./routes/users.routes"))
 
 app.use(errors.errorHandler);
 
-app.listen("https://restapinodenext.herokuapp.com" || 4000 , function(){
+app.listen(process.env.port || 4000 , function(){
     console.log("ready to go");
 })
